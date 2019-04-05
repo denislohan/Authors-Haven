@@ -26,7 +26,7 @@ app.use(passport.initialize())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-isLoggedIn = (req,res,next) =>{
+const isLoggedIn = (req,res,next) =>{
     if(req.originalUrl.indexOf('auth')==-1)
     {
         const authAdapter = new AuthAdapter();

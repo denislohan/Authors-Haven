@@ -5,6 +5,7 @@ const jwt=require('jsonwebtoken');
 require('dotenv').config()
 
 
+
 class User extends Controller{
     constructor(){
         super()
@@ -16,7 +17,13 @@ class User extends Controller{
          req.body = req.body ? req.body : req
 
          req.body.password = await bcrypt.hash(req.body.password, saltRounds)
+         
          resp = await super.postDb(req.body,'user');
+
+
+
+
+
         //  await bcrypt.hash(req.body.password, saltRounds, async (err,hash)=>{
         //     req.body.password=hash;
         //     resp = await super.postDb(req.body,'user');
@@ -40,6 +47,7 @@ class User extends Controller{
     async signin(req){
 
         console.log('in signin.......'+process.env.tokenKey)
+        console.log(process.env.NODE_ENV)
          return super.readDb(req.body,'user')
             // .then((user)=>{
             //         console.log("User "+user.id)

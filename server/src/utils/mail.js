@@ -16,7 +16,7 @@ var mailOptions = {
 };
 
 
-module.exports = send = toMail => { 
+module.exports = function send (toMail)  { 
 mailOptions.to = toMail;
 transporter.sendMail(mailOptions, function(error, info){
     if (error) {

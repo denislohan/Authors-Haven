@@ -39,10 +39,13 @@ class User{
         let userSchema = this.userSchema;
         return await userSchema.sync({force: false})
             .then(async function () {
+                
+
                 return await userSchema.create({
                     username: data.username,
                     password: data.password
             })
+
 
         }).catch((err)=>{
             return err

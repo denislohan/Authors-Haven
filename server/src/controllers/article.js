@@ -25,8 +25,6 @@ class Article extends Controller{
 
                 })
                 
-           
-
     }
 
     async update(){}

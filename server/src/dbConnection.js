@@ -1,9 +1,11 @@
 
 const Sequelize = require('sequelize');
+const config = require('./models/config/config.json')['production']
+console.log(config);
 
-        let sequelize = new Sequelize('denis', 'denisniwemugisha', '', {
-            host: 'localhost',
-            dialect: 'postgres',
+        let sequelize = new Sequelize(config.database, config.username, config.password, {
+            host: config.host,
+            dialect: config.dialect,
             operatorsAliases: false,
         
             pool: {
