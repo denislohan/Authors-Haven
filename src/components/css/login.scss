@@ -1,0 +1,22 @@
+.container{
+    margin: 50px auto;
+    width: 640px;
+}
+
+.login{
+    position: relative;
+    margin: 0px;
+    padding: 0px 200px 0px;
+    width: 310px;
+}
+.login p.submit Input{
+    position: relative;
+    text-align: center;
+    background: #eb94d0;
+    background-image: -webkit-linear-gradient(to left, #eb94d0, #2079b0);
+    background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
+
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+  }
